@@ -1,0 +1,22 @@
+name: Java CI with Maven
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout Code
+          uses: actions/checkout@v2
+
+        - name: Setup JDK 
+          uses: actions/setup-java@v2
+          with:
+            java-version: '11'
+
+        - name: Compile Java Program
+          run: javac addition.java
+
+        - name: Run java program
+          run: java addition
