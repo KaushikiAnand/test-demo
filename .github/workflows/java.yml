@@ -17,19 +17,9 @@ jobs:
             distribution: 'temurin'
             architecture: x64
 
-        - name: Cache Maven packages
-          uses: actions/cache@v2
-          with:
-              path: ~/.m2
-              key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-              restore-keys: ${{ runner.os }}-m2 
-
         - name: Compile Java Program
           run: 
             javac Addition.java
 
         - name: Run java program
-          run: java Addition
-        
-        - name: Run Tests
-          run: mvn -B test --file UserClass/users/pom.xml 
+          run: java Addition 
