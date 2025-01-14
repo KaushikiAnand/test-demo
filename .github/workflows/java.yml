@@ -19,8 +19,7 @@ jobs:
 
         - name: Compile Java Program
           run: 
-            cd test-demo
-            javac addition.java
+            javac addtion.java
 
         - name: Run java program
-          run: java addition
+          run: java addtion
