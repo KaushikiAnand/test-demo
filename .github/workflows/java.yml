@@ -18,7 +18,9 @@ jobs:
             architecture: x64
 
         - name: Compile Java Program
-          run: javac addition.java
+          run: 
+            cd test-demo
+            javac addition.java
 
         - name: Run java program
           run: java addition
