@@ -19,7 +19,7 @@ jobs:
 
         - name: Compile Java Program
           run: 
-            javac addtion.java
+            javac Addition.java
 
         - name: Run java program
-          run: java addtion
+          run: java Addition
